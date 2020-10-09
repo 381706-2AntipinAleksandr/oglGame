@@ -2,10 +2,15 @@ cmake_minimum_required(VERSION 3.0)
 
 project(Snake)
 
+set(CMAKE_CXX_STANDARD 17)
+
 #file(STRINGS src/ headers "*.h*")
 #file(STRINGS src/ sources "*.cpp")
 
-add_executable(${PROJECT_NAME} src/main.cpp) #${headers} ${sources})
+add_executable(${PROJECT_NAME} 
+    src/main.cpp
+    src/Render/ShaderRender.h
+    src/Render/ShaderRender.cpp) #${headers} ${sources})
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
